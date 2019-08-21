@@ -1,0 +1,15 @@
+<h1><%= @article.title %></h1>
+
+<%= link_to 'Update article', edit_article_path(@article) %>
+
+<p class="details"><%= @article.content %></p>
+
+<p>
+  <%= link_to article_path(@article),
+      method: :delete,
+      data: {confirm: "Are you sure?"} do %></li>
+      <i class="far fa-trash-alt"></i>
+      <% end %>
+</p>
+
+<%= link_to 'Back', root_path %>
